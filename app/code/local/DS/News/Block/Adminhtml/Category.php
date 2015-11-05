@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: user
+ * Date: 10/29/15
+ * Time: 6:12 PM
+ */
+class DS_News_Block_Adminhtml_Category extends Mage_Adminhtml_Block_Widget_Grid_Container
+{
+    protected function _construct()
+    {
+        parent::_construct();
+
+        $helper = Mage::helper('dsnews');
+        $this->_blockGroup = 'dsnews';
+        $this->_controller = 'adminhtml_category';
+
+        $this->_headerText = $helper->__('Categories Management');
+        $this->_addButtonLabel = $helper->__('Add Category');
+    }
+}

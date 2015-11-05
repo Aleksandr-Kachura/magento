@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <DS_Test>
+            <active>true</active>
+            <codePool>local</codePool>
+        </DS_Test>
+    </modules>
+</config>
+        

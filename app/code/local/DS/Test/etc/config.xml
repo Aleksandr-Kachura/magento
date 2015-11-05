@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <DS_Test>
+            <version>0.0.2</version>
+        </DS_Test>
+    </modules>
+
+
+    <frontend>
+        <layout>
+            <updates>
+                <dsnews>
+                    <file>ds_test.xml</file>
+                </dsnews>
+            </updates>
+        </layout>
+        <routers>
+            <dstest>
+                <use>standard</use>
+                <args>
+                    <module>DS_Test</module>
+                    <frontName>test</frontName>
+                </args>
+            </dstest>
+        </routers>
+    </frontend>
+
+
+    <!--<admin>
+        <routers>
+            <dsnews_admin>
+                <use>admin</use>
+                <args>
+                    <module>DS_News</module>
+                    <frontName>dsnews_admin</frontName>
+                </args>
+            </dsnews_admin>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <menu>
+            <dsnews module="dsnews">
+                <title>News</title>
+                <sort_order>77</sort_order>
+                <action>dsnews_admin/adminhtml_news</action>
+            </dsnews>
+        </menu>
+    </adminhtml>-->
+
+
+    <global>
+
+      <!--  <helpers>
+            <dsnews>
+                <class>DS_News_Helper</class>
+            </dsnews>
+        </helpers>
+
+
+        <blocks>
+            <dsnews>
+                <class>DS_News_Block</class>
+            </dsnews>
+        </blocks>-->
+        <models>
+            <dstest>
+                <class>DS_Test_Model</class>
+                <resourceModel>dstest_resource</resourceModel>
+            </dstest>
+            <dstest_resource>
+                <class>DS_Test_Model_Resource</class>
+                <entities>
+                    <table_test>
+                        <table>ds_test_entities</table>
+                    </table_test>
+                </entities>
+            </dstest_resource>
+        </models>
+        <resources>
+            <dstest_setup>
+                <setup>
+                    <module>DS_Test</module>
+                </setup>
+            </dstest_setup>
+        </resources>
+    </global>
+</config>
