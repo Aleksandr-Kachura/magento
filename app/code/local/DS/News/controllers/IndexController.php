@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 11/4/15
- * Time: 9:09 AM
- */
+
 class DS_News_IndexController extends Mage_Core_Controller_Front_Action
 {
 
@@ -12,6 +7,13 @@ class DS_News_IndexController extends Mage_Core_Controller_Front_Action
     {
         $this->loadLayout();
         $this->renderLayout();
+
+        /*
+         *
+         * $this->loadLayout();
+        $layoutHandles = $this->getLayout()->getUpdate()->getHandles();
+        echo '<pre>' . print_r($layoutHandles, true) . '</pre>';
+         */
     }
 
     public function viewAction()
@@ -29,6 +31,7 @@ class DS_News_IndexController extends Mage_Core_Controller_Front_Action
             $this->_forward('noRoute');
         }
     }
+
 
 
 }

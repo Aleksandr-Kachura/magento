@@ -59,6 +59,7 @@
                 </div>
 
                 <div class="price-info">
+                    <?php echo $_product->getSku(); ?>
                     <?php echo $this->getPriceHtml($_product); ?>
                     <?php echo $this->getChildHtml('bundle_prices') ?>
                     <?php echo $this->getTierPriceHtml() ?>

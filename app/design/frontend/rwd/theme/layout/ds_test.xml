@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<layout>
+    <!--<dstest_index_index>
+        <reference name="footer">
+            <block type="core/template" template="ds_test/index2.phtml" />
+        </reference>
+    </dstest_index_index>-->
+
+    <dstest_index_index>
+        <reference name="footer">
+            <block type="dstest/test" template="ds_test/index2.phtml" />
+        </reference>
+    </dstest_index_index>
+    <default>
+        <reference name="footer">
+            <block type="dstest/test" template="ds_test/index2.phtml" />
+        </reference>
+       <reference name="left_first">
+            <block type="dstest/test" template="ds_test/index.phtml"  />
+        </reference>
+        <reference name="head">
+           <action method="addItem"><type>skin_js</type><name>js/test/1.js</name></action>
+        </reference>
+    </default>
+
+</layout>

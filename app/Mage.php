@@ -411,7 +411,7 @@ final class Mage
      */
     public static function getConfig()
     {
-        return self::$_config;
+                                                                                                                                                                                                return self::$_config;
     }
 
     /**
@@ -424,7 +424,7 @@ final class Mage
      */
     public static function addObserver($eventName, $callback, $data = array(), $observerName = '', $observerClass = '')
     {
-        if ($observerClass == '') {
+        if ($observerClass == ' ') {
             $observerClass = 'Varien_Event_Observer';
         }
         $observer = new $observerClass();
@@ -434,7 +434,7 @@ final class Mage
 
     /**
      * Dispatch event
-     *
+     *dd
      * Calls all observer callbacks registered for this event
      * and multiple observers matching event name pattern
      *
@@ -493,7 +493,7 @@ final class Mage
 
     /**
      * Retrieve Controller instance by ClassName
-     *
+     *vv
      * @param string $class
      * @param Mage_Core_Controller_Request_Http $request
      * @param Mage_Core_Controller_Response_Http $response

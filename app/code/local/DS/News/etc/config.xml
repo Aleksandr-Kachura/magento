@@ -60,6 +60,13 @@
         </menu>
     </adminhtml>
 
+    <default>
+        <some>
+            <randome>
+                <xpath>It our path</xpath>
+            </randome>
+        </some>
+    </default>
 
     <global>
 
@@ -91,6 +98,11 @@
                     </table_categories>
                 </entities>
             </dsnews_resource>
+            <!--<catalog>
+                <rewrite>
+                    <product>DS_News_Model_Category1</product>
+                </rewrite>
+            </catalog>-->
         </models>
         <resources>
 

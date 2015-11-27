@@ -10,9 +10,12 @@
     <frontend>
         <layout>
             <updates>
-                <dsnews>
+               <!-- <dstest>
                     <file>ds_test.xml</file>
-                </dsnews>
+                </dstest>-->
+                <left_first>
+                    <file>ds_test.xml</file>
+                </left_first>
             </updates>
         </layout>
         <routers>
@@ -27,43 +30,47 @@
     </frontend>
 
 
-    <!--<admin>
+    <admin>
         <routers>
-            <dsnews_admin>
+            <dstest_admin>
                 <use>admin</use>
                 <args>
-                    <module>DS_News</module>
-                    <frontName>dsnews_admin</frontName>
+                    <module>DS_Test</module>
+                    <frontName>dstest_admin</frontName>
                 </args>
-            </dsnews_admin>
+            </dstest_admin>
         </routers>
     </admin>
 
     <adminhtml>
         <menu>
             <dsnews module="dsnews">
-                <title>News</title>
-                <sort_order>77</sort_order>
-                <action>dsnews_admin/adminhtml_news</action>
+                <children>
+                    <dstest_news translate="title" module="dsnews">
+                        <title>Test</title>
+                        <sort_order>30</sort_order>
+                        <action>dstest_admin/adminhtml_test</action>
+                    </dstest_news>
+                </children>
             </dsnews>
         </menu>
-    </adminhtml>-->
-
+    </adminhtml>
 
     <global>
 
-      <!--  <helpers>
-            <dsnews>
-                <class>DS_News_Helper</class>
-            </dsnews>
+        <helpers>
+            <dstest>
+                <class>DS_Test_Helper</class>
+            </dstest>
         </helpers>
 
 
         <blocks>
-            <dsnews>
-                <class>DS_News_Block</class>
-            </dsnews>
-        </blocks>-->
+            <dstest>
+                <class>DS_Test_Block</class>
+            </dstest>
+        </blocks>
+
         <models>
             <dstest>
                 <class>DS_Test_Model</class>
@@ -85,5 +92,21 @@
                 </setup>
             </dstest_setup>
         </resources>
+        <helpers>
+            <dstest>
+                <class>DS_Test_Helper</class>
+            </dstest>
+        </helpers>
+        <events>
+            <customer_login>
+                <observers>
+                    <dstest>
+                        <type>model</type>
+                        <class>dstest/observer</class>
+                        <method>logCustomer</method>
+                    </dstest>
+                </observers>
+            </customer_login>
+        </events>
     </global>
 </config>

@@ -21,6 +21,13 @@ class DS_Test_IndexController extends Mage_Core_Controller_Front_Action
         }
         var_dump($output);*/
 
+        /*$this->loadLayout();
+        $this->renderLayout();*/
+
+        $this->loadLayout()->_setActiveMenu('dsnews');
+       // $this->_addContent($this->getLayout()->createBlock('dstest/adminhtml_test_edit'));
+        $this->renderLayout();
+
     }
 
 
