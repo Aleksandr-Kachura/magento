@@ -1,0 +1,17 @@
+<?php
+$news = $this->getNewsCollection();
+$newsViewUrl = Mage::getUrl('news/index/view');
+/*$my_helper = Mage::helper('dsnews/data');*/
+var_dump(Mage::getModel('catalog/product')->load(905)->getName());
+
+
+?>
+
+<h1>News</h1>
+<?php foreach ($news as $item): ?>
+    <h2>
+        <a href="<?php echo $newsViewUrl; ?>?id=<?php echo $item->getId(); ?>">
+            <?php echo $item->getTitle(); ?>
+        </a>
+    </h2>
+<?php endforeach; ?>
