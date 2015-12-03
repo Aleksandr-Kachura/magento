@@ -107,6 +107,15 @@
                     </dstest>
                 </observers>
             </customer_login>
+            <register_visit>
+                <observers>
+                    <dstest>
+                        <type>model</type>
+                        <class>dstest/observer</class>
+                        <method>registerVisit</method>
+                    </dstest>
+                </observers>
+            </register_visit>
         </events>
     </global>
 </config>

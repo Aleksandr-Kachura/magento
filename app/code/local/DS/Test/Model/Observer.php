@@ -19,4 +19,11 @@ class Ds_Test_Model_Observer
         $customer = $observer->getCustomer();
         Mage::log("text here", null, 'MMM.log');
     }
+
+    public function registerVisit(Varien_Event_Observer $observer)
+    {
+        /* echo "OK";
+         exit;*/
+        Mage::log("1111", null, 'MMM.log');
+    }
 }
