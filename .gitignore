@@ -55,3 +55,6 @@ $ cat .gitignore
 /*.rar
 /.svn
 /*.zip
+
+vendor/
+var/cache
