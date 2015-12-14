@@ -84,6 +84,12 @@ class Mage_Adminhtml_Block_Dashboard_Grids extends Mage_Adminhtml_Block_Widget_T
             'class'     => 'ajax'
         ));
 
+        $this->addTab('customers2', array(
+            'label'     => $this->__('Edit'),
+            'url'       => $this->getUrl('*/*/customersMost', array('_current'=>true)),
+            'class'     => 'ajax'
+        ));
+
         return parent::_prepareLayout();
     }
 }
