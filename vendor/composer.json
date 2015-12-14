@@ -1,0 +1,28 @@
+{
+    "name": "magento",
+    "type": "magento-module",
+    "version": "1.0.1",
+    "description": "YOUR_MODULE_DESCRIPTION_IS_HERE",
+    "repositories": [
+        {"type": "composer", "url": "http://packages.firegento.com"}
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "aligent/geoip" : "*"
+    },
+    "extra": {
+        "magento-root-dir": "../../",
+        "magento-deploystrategy": "copy",
+        "magento-force": "override",
+        "map": [
+            ["app/etc/modules/AllBear_PciAuth.xml",                             "app/etc/modules/AllBear_PciAuth.xml"],
+            ["app/code/community/AllBear/PciAuth/",                             "app/code/community/AllBear/PciAuth/"],
+            ["app/design/adminhtml/default/default/layout/allbear_pciauth.xml", "app/design/adminhtml/default/default/layout/allbear_pciauth.xml"],
+            ["app/design/adminhtml/default/default/template/allbear/pciauth",   "app/design/adminhtml/default/default/template/allbear/pciauth"],
+            ["app/design/frontend/base/default/layout/allbear_pciauth.xml",     "app/design/frontend/base/default/layout/allbear_pciauth.xml"],
+            ["app/design/frontend/base/default/template/allbear/pciauth",       "app/design/frontend/base/default/template/allbear/pciauth"],
+            ["app/locale/en_US/AllBear_PciAuth.xml",                            "app/locale/en_US/AllBear_PciAuth.xml"],
+            ["app/locale/ru_RU/AllBear_PciAuth.xml",                            "app/locale/ru_RU/AllBear_PciAuth.xml"]
+        ]
+    }
+}
